@@ -1,0 +1,377 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------------
+# 在路上旅游网 管理员及其相关页面
+# ------------------------------------------------------------------------
+# Designed by 雷良卿
+--------------------------------------------------------------------------
+
+    1.    全局设置
+    2.    验证
+    3.    发布景点
+    4.    景点详情
+    5.    所有景点
+    6.    线路审核
+    7.    所有景点
+    8.    用户反馈
+    9.    所有账户
+
+--------------------------------------------------------------------------------*/
+/* 1.   全局设置
+--------------------------------------------------------------------------------*/
+body { font-family: "微软雅黑"; }
+/* 表格样式 */
+table th,
+table td { 
+    font-size: 14px;
+    font-weight: normal !important;
+    text-align: center !important;
+    vertical-align: middle !important; 
+}
+
+.adimin-title {
+    font-family: "微软雅黑";
+    background: #31a6ed ;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #FFF;
+}
+
+/* 链接样式 */
+a { text-decoration: none !important; }
+
+a[data-toggle="modal"]:hover { color: red !important; }
+
+/* 按钮样式 */
+.btn-sure {
+    background-color: #146cf5; 
+    color: white
+}
+.btn-cancel {
+    background-color: #4e95f6; 
+    color: white;
+}
+
+/* 模态框样式 */
+.modal{ margin-top: 30px; }
+.xs { margin-top: 100px; }
+
+/* 页面上边距 */
+main { margin-top:30px; }
+/*--------------------------------------------------------------------------------*/
+/* 2.   验证
+----------------------------------------tip----------------------------------------*/
+.tip {
+    font-size: 16px;
+    color: red;
+    text-align: left;
+    margin: 0;
+}
+
+.allview-tip { color: transparent; position: absolute; }
+
+.feedback-tip { text-indent: 10px; }
+/*--------------------------------------------------------------------------------*/
+/*3.   发布景点
+--------------------------------------------------------------------------------*/
+/* 背景图 */
+.publish-view {
+    position: relative;
+    background: url(../images/bg/9.jpg) no-repeat;
+    background-size : cover;
+    background-attachment:fixed; 
+}
+
+/* 景点发布表单表框 */
+.publish-view .wrapper {
+    color:#666;
+    padding: 69px 0;
+    margin-bottom: 52px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.publish-view label { font-size: 16px; }
+
+/* 上传图片样式 */
+.publish-view .upload-img {
+    width: 186px;
+    height: 137px;
+    border: 3px white solid;
+}
+
+.publish-view-tip { position: absolute; }
+
+.publish-view  .form-horizontal .form-group {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 0 0 10px 0; 
+}
+
+/* 按钮 */
+.publish-view .photo-btn { margin-left: 58px; }
+
+.publish-view .photo-btn:hover { cursor: pointer; }
+
+.publish-view .file-btn { display: none; }
+
+.publish-view .validatebtn {
+    width: 108px;
+    height: 44px;
+    background-color: #4b72eb;
+    margin-left: 68px;
+}
+/*--------------------------------------------------------------------------------*/
+/* 4.   景点详情
+--------------------------------------------------------------------------------*/
+.view-details { margin-bottom: 30px; }
+
+.view-details_body { background-color: #eeeded; }
+
+.view-details_body .data-img {
+    max-height: 400px;
+    width: 100%;
+}
+
+.view_details_left,
+.view_details_message {
+	border-radius: 12px !important;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.view-details h2 {
+	font-size: 25px;
+    color: #0091ea;
+    line-height: 30px;
+    font-family: 微软雅黑,'Microsoft Yahei','Hiragino Sans GB',tahoma,arial,宋体;
+}
+
+.view_details_message .t_txt,
+.travel_tips h3 {
+    padding: 0 0 0 24px;
+    font-family: "微软雅黑";
+    border-bottom: 1px dashed #e9e9e9;
+    color: #0091ea;
+    font-size: 20px;
+    height: 45px;
+}
+
+.view_details_message {
+    width: 30.333333% !important;
+    margin-left: 23px;
+    padding: 0 !important;
+    border-radius: 12px !important;
+}
+
+.view_details_message img {
+    width: 351px;
+    margin-top: 34px;
+    border-radius: 14px;
+}
+
+.view_details_message h4 span {
+    color: rgb(81, 81, 81);
+    font-weight: normal;
+}
+
+.view_details_message .content1 {
+	padding: 0 22px 0 22px;
+	color: #515151;
+    font-family: "微软雅黑";
+    background: #fff;
+}
+
+.view_details_message .content1 h4 {
+	font-family: "微软雅黑";
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.view_details_message .content1 p { text-indent: 31px; } 
+
+.view-details_body .content2 { padding: 0 12px 0 12px; }
+/*--------------------------------------------------------------------------------*/
+/* 5.   所有景点
+--------------------------------------------------------------------------------*/
+.views .item {
+	width: 220px;
+    height: 215px;
+    float: left;
+    margin: 20px 23px 0 0;
+    font-family: "Hiragino Sans GB","microsoft yahei";
+    position: relative;
+    box-shadow: 0px 0px 5px #ddd;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+
+.views .item .price {
+	color: #f80;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.views .item .price span {
+	font-size: 12px;
+    font-weight: normal;
+    color: #f90;
+}
+
+.views .item .price span.myd {
+    float: right;
+    line-height: 30px;
+    color: #999;
+    font-family: microsoft yahei;
+}
+
+.views .item .price span.myd em { color: #f60; }
+
+.views .item .name {
+	color: #333;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.views .item .name a:hover { color: #f80; }
+
+.views-bgimg {
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+
+.viewsPage select { width: 58px !important; }
+
+.viewsPage { 
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 52% !important;
+}
+/*--------------------------------------------------------------------------------*/
+/* 6.   线路审核
+--------------------------------------------------------------------------------*/
+.checkRoute {
+    width: 100%;
+    height: 100%;
+    background: url(../images/routebg.jpg) no-repeat center top;
+    background-size : cover;
+    background-attachment:fixed; 
+
+}
+
+.checkRoute-container {
+    width: 1200px;
+    padding-bottom: 20px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    background: #fff;
+    min-height: 508px;
+}
+
+.checkRoute-title {
+    width:100%;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    background: #31a6ed;
+    position: relative;
+}
+
+.checkRoute-title .poptip-arrow {
+    color: #31a6ed;
+    font-size: 12px;
+    font-style: normal;
+    position: absolute;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    bottom: -12px;
+    line-height: 20px;
+    left: 48%;
+}
+
+.checkRoute .main-top {
+    height: 85px;
+    padding: 30px 78px;
+    position: relative;
+    font-family: "microsoft yahei";
+}
+
+.main-top a {
+    position: absolute;
+    cursor: pointer;
+    right: 88px;
+    border: 1px solid #fff;
+    margin-left: 10px;
+    padding: 1px 10px;
+    color: #fff;
+}
+
+.checkRoute .form-horizontal{ padding-top: 60px; }
+
+.checkRoute label {
+    display: inline-block;
+    font-weight: normal !important;
+    width: 112px;
+    color: #333;
+    font-size: 14px;
+    text-align: right;
+    height: 34px;
+    line-height: 23px;
+    padding: 2px 0;
+    font-family: "microsoft yahei";
+}
+
+.checkRoute .outline-btn,
+.checkRoute .inline-btn {
+    margin-top: 13px;
+    width: 126px;
+    height: 52px;
+}
+
+.checkRoute .describe-label { font-size: 18px; }
+
+.checkRoute  .day-label { margin-left: 302px !important; }
+.checkRoute  .day-content { border: 1px dotted black; width: 290px; }
+
+/*--------------------------------------------------------------------------------*/
+/* 7.  所有景点
+--------------------------------------------------------------------------------*/
+.allview-main { height: 413px; }
+/*修改景点模态框*/
+.allview input[type="submit"] { margin-left: 414px; }
+.allview #edit .form-horizontal .form-group {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 0 0 10px 0; 
+}
+
+/*--------------------------------------------------------------------------------*/
+/* 8.  用户反馈
+--------------------------------------------------------------------------------*/
+.feedback-main { height: 490px; }
+.admin-feedback .submitbtn { margin-left: 487px; width: 83px; height: 46px; }
+.admin-feedback .madal-body { padding: 20px; }
+
+/*--------------------------------------------------------------------------------*/
+/* 9.  所有账户
+--------------------------------------------------------------------------------*/
+.allaccount .message { float: left; }
+.allaccount .introduce { clear: both; }
+.allaccount .allaccount-main { height: 485px; }
+.allaccount .controduct-label { margin-left: 12px }
+.allaccount .logo { float: left; margin-left: 25px; }
+.allaccount .allaccount-input { width: 262px !important; }
+.allaccount .introduce textarea { margin-left: 38px; width: 492px !important; }

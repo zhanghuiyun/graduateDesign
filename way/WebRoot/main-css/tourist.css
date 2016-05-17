@@ -1,0 +1,102 @@
+/*------------------------------------------------------------------------
+#  游客
+# ------------------------------------------------------------------------
+--------------------------------------------------------------------------
+    1.    游客反馈
+    2.    游客查看反馈
+--------------------------------------------------------------------------------*/
+/* 1.    游客反馈
+--------------------------------------------------------------------------------*/
+.touristFeedback{
+	width:100%;
+	background: url(../images/bg/000001.jpg) no-repeat;
+	position: relative;
+	background-size : 100% auto;
+	background-position: 0 -100px;
+	background-attachment:fixed; 
+}
+.touristFeedback .top{
+	margin-top: 100px;
+}
+#feedbackSubmit label{
+	color: #fff;
+}
+#feedbackSubmit textarea{
+	background-color: transparent;
+	color:#fff;
+}
+.touristFeedback #submit{
+	margin-top: 30px;
+}
+/*侧边导航栏*/
+.touristFeedback-nav .panel{
+	background-color: transparent;
+}
+.touristFeedback-nav .panel .panel-default{
+	background-color: transparent;
+}
+.touristFeedback-nav .panel-default > .panel-heading {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+}
+.touristFeedback-nav .nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 0 0 0 0; 
+}
+.touristFeedback-nav .nav-tabs>li>a:hover {
+	background-color:rgba(255,255,255,0.6);
+    border-color: none;
+    color:#fff;
+}
+/*表单验证*/
+.touristFeedback #errorInfo{
+	margin-top: 8px;
+	position: absolute;
+	color: #fff;
+}
+
+/*--------------------------------------------------------------------------------
+ 2.    游客查看反馈
+--------------------------------------------------------------------------------*/
+/*反馈信息表格*/
+.touristFeedbackSearch table th,td{
+	text-align: center;
+	line-height:1.5em;
+	vertical-align: middle;
+}
+.touristFeedbackSearch table td{
+	font-size: 12px;
+	word-break: break-all;
+}
+.touristFeedbackSearch th{
+	font-family: "微软雅黑";
+    background: #31a6ed ;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #FFF;
+    text-align: center;
+}
+.touristFeedbackSearch .table>tbody>tr>td, 
+.touristFeedbackSearch .table>tbody>tr>th,
+.touristFeedbackSearch .table>thead>tr>td, 
+.touristFeedbackSearch .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: middle; 
+    border-top: 1px solid #ddd;
+}
+/*删除反馈框*/
+.touristFeedbackSearch #delete{
+	margin-top: 100px;
+}
+/*距离顶部边距*/
+.touristFeedbackSearch .top_herder{
+	margin-top: 30px;
+}
+
+
+

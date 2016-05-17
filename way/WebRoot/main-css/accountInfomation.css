@@ -1,0 +1,121 @@
+/*------------------------------------------------------------------------
+#  信息页面
+# ------------------------------------------------------------------------
+--------------------------------------------------------------------------
+    1.    注册
+    2.    用户信息
+/*--------------------------------------------------------------------------------
+ 1.    注册
+--------------------------------------------------------------------------------*/
+/*背景图片*/
+.resign{
+	position: relative;
+	background: url(../images/bg/7.jpg) no-repeat;
+	background-size : cover;
+	background-attachment:fixed; 
+}
+/*上传图片*/
+.resign #prv-pic{
+	width: 100px;
+	height: 70px;
+	border: 1px solid #ccc;
+	position: relative;
+	margin-top: 2px;
+}
+.resign #prv-pic span{
+	position: absolute;
+	top: 24px;
+	left: 24px;
+}
+.resign #identify-pic{
+	margin-top: 6px;
+}
+/*注册表单样式*/
+.resign .border{
+	border:1px solid #ccc;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 8px;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+	top: 30px;
+	margin-bottom: 150px;
+	color:inherit;
+	color:#666;
+}
+.resign #userType{
+	margin-top: 25px;
+}
+/*用户类型*/
+.resign #userType label:not(.role){
+	color: #555;
+	font-weight: normal;
+}
+/*验证码图片*/
+.resign #checkImg{
+	margin-top: 2px;
+}
+.resign .form-control::-webkit-input-placeholder {
+    color:#ccc;
+}
+
+/*--------------------------------------------------------------------------------
+ 2.    用户信息
+--------------------------------------------------------------------------------*/
+.infomation{
+	position: relative;
+	background: url(../images/bg/111.jpg) no-repeat;
+	background-size : cover;
+	background-attachment:fixed; 
+}
+/*外边框*/
+.infomation .container {
+	margin-top:20px;
+}
+.infomation .border{
+	border:1px solid #ccc;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 8px;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+	top: 30px;
+	color:inherit;
+	color:#666;
+}
+.infomation .top{
+	top: 30px;
+}
+/*表单与边框的距离*/
+.infomation .top_border{
+	margin-top: 20px;
+}
+.infomation .form-group{
+	margin-top: 20px;
+}
+.infomation #teleInfo,
+.infomation #introduceInfo{
+	position: absolute;
+	color: #CA1F1F;
+	font-weight: bold;
+}
+.infomation #tourist-save{
+	margin-top: 30px;
+}
+ 
+.infomation .user-message {
+	margin-bottom: 60px;
+}
+/*更改头像按钮*/
+.infomation #tourist-submit{
+	border: 1px solid transparent;
+    border-radius: 4px;
+    color:#fff;
+    width: 70px;
+    height: 25px;
+    background-color:rgba(66,139,202,0.78); 
+}
+.infomation #tourist-submit:hover{
+	background-color:#357EBD; 
+}
+/*证件照*/
+.infomation #identiImg{
+	width: 100px;
+	height: 70px;
+}

@@ -1,0 +1,511 @@
+/*------------------------------------------------------------------------
+#  订单以及线路相关页面
+# ------------------------------------------------------------------------
+-------------------------------------------------------------------------- 
+    1.    订单列表
+    2.    订单确认页
+    3.    订单详情页
+    4.    线路详情页
+    5.    发布路线
+--------------------------------------------------------------------------------*/
+/* 1.    订单列表
+--------------------------------------------------------------------------------*/
+/*订单信息表格*/
+.reserve table .reserve-info{
+	width: 95px;
+}
+.reserve table .tourist-info{
+	width: 85px;
+}
+.reserve table th,
+.reserve table td{
+	text-align: center;
+}
+.reserve table td{
+	font-size: 12px;
+	word-break: break-all;
+}
+.reserve th{
+	font-family: "微软雅黑";
+    background: #31a6ed ;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #FFF;
+    text-align: center;
+}
+.reserve .table-bordered>tbody>tr>td, 
+.reserve .table-bordered>tbody>tr>th, 
+.reserve .table-bordered>thead>tr>td, 
+.reserve .table-bordered>thead>tr>th {
+    vertical-align: middle;
+}
+/*预约详情模态框样式*/
+.reserve .infoCheck{
+	margin-top: 100px;
+}
+.reserve .info-check-item{
+	padding-top: 7px;
+	padding-left: 0;
+}
+/*评价模态框样式*/
+.reserve .assess{
+	width: 150px !important;
+	margin-top: 5px;
+	display: inline-block; 
+}
+/*拒绝理由*/
+.reserve #g_reject{
+    margin-top: 60px;
+}
+.reserve #jujue .modal-body{
+    margin-bottom: 15px;
+}
+.reserve #refuseInfo{
+    position: absolute;
+}
+.reserve #g_reject_reason,
+.reserve #refuse{
+    resize:none;
+}
+
+/*容器*/
+.reserve .container {
+    margin-top:30px;
+}
+.reserve .modal{
+    margin-top: 50px;
+}
+/*操作按钮样式*/
+.reserve .btnStyle{
+	background-color: transparent;
+	border:none;
+}
+.reserve .btnStyle:hover{
+    background-color: #31A6ED;
+    color:#fff;
+}
+/*订单评价*/
+.reserve .tip{
+    position: absolute;
+    color: transparent;
+}
+/*--------------------------------------------------------------------------------
+ 2.    订单确认页
+--------------------------------------------------------------------------------*/
+/*最外围容器*/
+.orderConfrim .container{
+    margin-top: 30px;
+}
+/*出游信息*/
+/*input框样式*/
+.orderConfrim .inputBorder{
+    border:none;
+}
+.orderConfrim .lineHeight{
+    margin-top: 6px;
+}
+.orderConfrim .money{
+    width: 100px;
+}
+.orderConfrim .inputStyle{
+    border : 1px solid #95B8E7;
+}
+.orderConfrim .sumvalidInfo{
+    display: block;
+    height: 27px;
+    line-height: 2.5em;
+}
+.check{
+    position:absolute;
+    color:red;
+}
+/*出游人信息框*/
+.orderConfrim .travelInfor{
+    border: 1px solid rgba(204,204,204,0.5);
+    background-color: rgba(255,255,255,0.7);
+    /*box-shadow: 0 3px 5px rgba(255,255,255,0.7);*/
+    border-radius: 3px;
+}
+/*日历*/
+.orderConfrim .datebox .combo-arrow {
+    padding: 0 15px;
+}
+.orderConfrim .textbox .textbox-text{
+    padding: 6px 12px;
+    border-radius: 4px;
+    line-height: 1.5em;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.orderConfrim .calendar table{
+    width: auto;
+}
+/*icon样式*/
+.orderConfrim .icon{
+    color: #F17A52;
+    font-size: 30px;
+}
+.orderConfrim .icon_explain{
+    margin-left: 8px;
+    font-size: 30px;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.orderConfrim .icon_top{
+  margin: 10px 0 10px 0;
+}
+.orderConfrim .labelStyle{
+    font-weight: normal;
+}
+/*出游信息*/
+
+/*费用明细*/
+.orderConfrim .fixed{
+    position: fixed;
+}
+.orderConfrim .price{
+    width: 50px;
+    margin-left: 16px;
+    border: none;
+}
+.orderConfrim .personSum{
+    width: 25px;
+    border:none;
+}
+/*费用明细*/
+
+/*出游人信息*/
+.orderConfrim .div_distance{
+    margin-top: 30px;
+}
+.orderConfrim .div_distance_bottom{
+    margin-bottom: 30px;
+}
+.orderConfrim .form-control::-webkit-input-placeholder {
+    color:#ccc;
+}
+
+.orderConfrim #tourInfoModal td{
+    width: 150px;
+}
+
+/*按钮样式*/
+.orderConfrim .btnStyle,
+.orderConfrim .btnStyle:hover{
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color:#fff;
+    width: 88px;
+    height: 34px;
+}
+.orderConfrim .btnStyle{
+    background-color: #428bca;
+}
+.orderConfrim .btnStyle:hover{
+    background-color: #357EBD;
+}
+.orderConfrim .p_distance{
+    line-height: 2em;
+}
+/*分隔线*/
+.orderConfrim .separate_border{
+    border-top:1px solid rgba(237,238,238,0.7);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.orderConfrim .remove_style{
+    color:#F17A52;
+}
+/*出游人信息*/
+
+/*表单验证*/
+.orderConfrim #name_tip,
+.orderConfrim #tel_tip,
+.orderConfrim #id_card_tip,
+.orderConfrim #tour_wrapper p{
+    position: absolute;
+    color: transparent;
+}
+.orderConfrim #tour_wrapper .form-group{
+    margin-top: 10px;
+}
+
+/*--------------------------------------------------------------------------------
+ 3.    订单详情页
+--------------------------------------------------------------------------------*/
+.orderDetail{
+    position: relative;
+    background: url(../images/bg/222222.jpg) no-repeat;
+    background-size : cover;
+    background-attachment:fixed; 
+}
+/*边框样式*/
+.orderDetail .border{
+    margin-top: 30px;
+    margin-bottom:30px;
+    background-color: rgba(16,16,16,0.35);
+}
+/*间距*/
+.orderDetail .margin-top{
+    margin-top: 20px;
+}
+.orderDetail .margin-bottom{
+    margin-bottom: 20px;
+}
+.orderDetail .margin{
+    margin-top: 8px;
+}
+.orderDetail .container .row .border span,
+.orderDetail .container .row .border label,
+.orderDetail .container .row .border p{
+    margin-top: 8px;
+    color:#fff;
+}
+/*分隔线*/
+.orderDetail .separet{
+    border-right:1px dashed rgba(255,255,255,0.5);
+}
+
+/*--------------------------------------------------------------------------------
+ 4.    线路详情页
+--------------------------------------------------------------------------------*/
+.routeDetail{
+    background-color: #EEEDED
+}
+.routeDetail .wrapper{
+    margin-top: 30px;
+    background-color: #fff;
+    margin-bottom: 50px;
+    border-radius: 8px;
+}
+.routeDetail .top{
+    margin-top: 30px;
+}
+/*轮播图*/
+#carousel-example-generic{
+    margin-top: 10px;
+}
+/*线路介绍*/
+.routeDetail .routeWrapper{
+    background-color: #fff;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+.padding-top{
+    margin-top: 10px;
+}
+.btnBottom{
+    margin-bottom: 30px;
+}
+/*评价标签栏*/
+.routeDetail .nav-tabs>li.active>a, 
+.routeDetail .nav-tabs>li.active>a:hover, 
+.routeDetail .nav-tabs>li.active>a:focus{
+    color: #fff;
+    cursor: default;
+    background-color: #428BCA;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.routeDetail .nav-tabs{
+    border:none;
+}
+.routeDetail .nav-tabs>li>a{
+    color: #000;
+}
+.routeDetail .border{
+    border:1px solid #ccc;
+    background-color: #fff;
+}
+/*评价信息栏*/
+.routeDetail .timeFontStyle{
+    font-size: 5px;
+    color: rgba(51,51,51,0.5);
+}
+.routeDetail .userFontStyle{
+    color: #D86356;
+    font-size: 18px;
+    font-weight: bold;
+}
+.routeDetail .userFontStyle span{
+    font-size: 12px;
+}
+.routeDetail .img{
+    width: 40px;
+    height: 40px;
+    border:1px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+}
+.routeDetail .assessor{
+    display: inline-block;
+    float: left;
+    margin-left: 8px;
+    line-height: 1em;
+}
+.routeDetail .border-bottom{
+    border:0 0 1px 0;
+    border-bottom: 1px solid rgba(249,244,244,0.6);
+    padding-top: 15px;
+}
+/*景点介绍*/
+.routeDetail .viewWrapper{
+    margin-top: 20px;
+    height: 152px;
+}
+.routeDetail .viewWrapper:hover{
+    border:1px solid  #0091EA;
+}
+.routeDetail .infoFloat{
+    display: inline-block;
+}
+.routeDetail .imgFloat{
+    display: inline-block;
+    height: 150px;
+    position: relative;
+}
+.routeDetail .imgView{
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    max-width: 200px;
+    max-height: 150px;
+}
+.routeDetail .infoDetail{
+    margin-top: 20px;
+}
+.routeDetail .detailBtn{
+    margin-top: 20px;
+    height: 50px;
+    border-left: 1px dashed #ccc;
+}
+.routeDetail .detailBtn a{
+    width: 100px;
+    height: 35px;
+    display: block;
+    text-align: center;
+    line-height: 2.5em;
+}
+.routeDetail .btnPosition{
+    margin-top: 16px;
+    border:1px dashed #0091EA ;
+    height: 35px;
+    width: 100px;
+    background-color: transparent;
+}
+.routeDetail .btnPosition:hover{
+    background-color:#0091EA;
+    color:#fff;
+    text-decoration: none;
+}
+.routeDetail .viewName{
+    font-size: 20px;
+    color: #EC3939;
+    font-weight: bold;
+}
+.routeDetail .viewRemark{
+    font-size: 16px;
+    color: #333;
+}
+.routeDetail .score{
+    font-size: 16px;
+    color: #216DFD;
+    font-weight: bold;
+}
+.routeDetail #tab-content{
+    margin-bottom: 30px;
+}
+.routeDetail .address{
+    color:#ccc;
+    font-size: 14px;
+}
+/*分页*/
+.routeDetail .page {
+    margin-left: 40%;
+
+}
+/*--------------------------------------------------------------------------------
+ 5.    发布路线
+--------------------------------------------------------------------------------*/
+.releaseRoute{
+    position: relative;
+    background: url(../images/bg/111.jpg) no-repeat;
+    background-size : cover;
+    background-attachment:fixed; 
+}
+.releaseRoute .g_addViewStyle{
+    display: inline-block;
+}
+/*表单样式*/
+.releaseRoute .border{
+    border:1px solid #ccc;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    top: 30px;
+    margin-bottom: 150px;
+    color:inherit;
+    color:#666;
+}
+.releaseRoute .routeDay{
+    margin-top: 8px;
+}
+.releaseRoute .routeDay_input{
+    margin-top: -8px;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    text-align: center;
+}
+.releaseRoute .form-control::-webkit-input-placeholder {
+    color:#ccc;
+}
+
+/*添加按钮样式*/
+.releaseRoute .btnStyle{
+    background-color: rgba(204,204,204,0.5) !important;
+    box-shadow: 0px 2px 3px #000 !important; 
+}
+/*行程发布天数输入框样式*/
+.releaseRoute .textInput{
+    width: 35px;
+    height: 34px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+/*距离表单边框*/
+.releaseRoute .top{
+    margin-top:20px;
+}
+
+/*模态框*/
+.releaseRoute #addView{
+    margin-top: 30px;
+}
+.releaseRoute .form-group{
+    margin-top: 20px;
+}
+#searchViewModel td, th {
+    padding: 0;
+    width: 119px;
+    overflow: hidden;
+}
+.releaseRoute .viewPadding span{
+    display: inline-block;
+    padding: 0 0 0 5px;
+    font-weight: normal;
+}
+/*表单验证*/
+.releaseRoute #routeNameInfo,
+.releaseRoute #routePriceInfo,
+.releaseRoute #recommendReasonInfo,
+.releaseRoute #g_Allview_tip,
+.releaseRoute .schedule-tip{
+    position: absolute;
+    color:transparent;
+}
+

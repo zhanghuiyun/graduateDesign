@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+                
+    <!-- 在实际的开发中通常都需要配置 mvc:annotation-driven 标签 -->
+   <mvc:annotation-driven/>
+   <!-- 它会对 DispatcherServlet 请求进行筛选，如果发现没有经过映射的请求 就将请求交给 WEB 应用服务器默认的 Servlet 
+		处理。如果不是静态资源的请求，才由DispatcherServlet 继续处理 处理静态资源 -->
+   <mvc:default-servlet-handler/>
+   
+	<!-- 配置自动扫描的包 -->
+	<context:component-scan base-package="com.way" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
+	</context:component-scan>
+	
+
+	<!-- 配置视图解析器：如何把handler 方法返回值解析为实际的物理视图 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/content/"></property>
+		<property name="suffix" value=".jsp"></property>
+		<property name="order" value="1"/>
+	</bean>
+	<!-- 配置视图解析器：使用视图的名字来解析 -->
+	<!-- 通过 order 属性来定义优先级 order 值越小优先级越高 上面那个默认最高 也就是最后执行 <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"> 
+		<property name="order" value="100"></property> </bean> -->
+
+	<!-- 配置直接转发的页面 可以直接相应转发的页面 无需再经过 Handler 的方法 <mvc:view-controller path="/Success" 
+		view-name="Success"/> -->
+
+	<bean id="stringHttpMessageConverter"
+		class="org.springframework.http.converter.StringHttpMessageConverter" />
+		 
+	<!-- 配置 MultipartResolver -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<property name="maxUploadSize" value="10485760000"></property>
+	</bean>
+
+	<bean id="exceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="com.way.exception.EmailException">forgetPassword</prop>
+				<prop key="com.way.exception.CodeException">setPassword</prop>
+				<prop key="com.way.exception.OrderException.OrderException">user/reserve</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<mvc:view-controller path="/" view-name="redirect:/content/go.jsp"/>
+
+
+</beans>
